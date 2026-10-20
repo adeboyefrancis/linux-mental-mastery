@@ -25,5 +25,5 @@ test: ## Run the Bats test suite
 
 check: lint fmt-check syntax test ## Everything CI runs
 
-setup: ## Install dev tools on Debian/Ubuntu
-	sudo apt-get update && sudo apt-get install -y bats shellcheck shfmt jq
+setup: ## Install dev tools on RHEL Machine
+	sudo yum  update && sudo dnf install -y bats shellcheck shfmt jq

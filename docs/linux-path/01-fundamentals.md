@@ -4,10 +4,24 @@
 > **Prerequisites:** [Day NN-1](day-NN-1.md) (or "none")
 
 ## Goal
-By the end of this lesson you can: (3 bullets, each verifiable)
+- Refresh Linux Concepts around the Red Hat Enterprise distro to align with current job role
+- Build Mental model and improve troubleshooting and problem solving skills
 
 ## Concepts
-Short explanations. Each new idea is followed immediately by a runnable example.
+Leveraging File Permission concept to enhance a secured linux/selinux environment to build a robust least principle environment
+
+Core Permission types: Octal (421) , Symbolic (rwx)
+Usage:
+
+```bash
+chmod u+x src/app.sh        # symbolic: add execute for the owner
+chmod 755 src               # octal: rwx for owner, r-x for group and others
+chmod 644 docs/notes.txt    # octal: rw- r-- r--
+chmod go-rwx docs           # symbolic: remove all access for group and others
+
+#Using stat command to review file permission
+stat -c '%a %A %n' <file-name> <file-name>
+```
 
 ## Worked example
 A realistic mini-scenario built up step by step, with Expected output.
